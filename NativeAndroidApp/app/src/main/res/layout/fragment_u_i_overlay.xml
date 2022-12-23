@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UIOverlayFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_half"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5" />
+
+    <Button
+        android:id="@+id/btn_showMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gl_half" />
+
+    <Button
+        android:id="@+id/btn_sendMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send msg"
+        app:layout_constraintStart_toEndOf="@id/btn_showMain"
+        app:layout_constraintTop_toBottomOf="@id/gl_half" />
+
+    <Button
+        android:id="@+id/btn_unload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="unload"
+        app:layout_constraintStart_toEndOf="@id/btn_sendMsg"
+        app:layout_constraintTop_toBottomOf="@id/gl_half" />
+
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="finish"
+        app:layout_constraintStart_toEndOf="@id/btn_sendMsg"
+        app:layout_constraintTop_toBottomOf="@id/btn_unload" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
