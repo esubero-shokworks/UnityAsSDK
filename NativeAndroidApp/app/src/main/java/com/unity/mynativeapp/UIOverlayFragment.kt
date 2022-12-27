@@ -17,7 +17,6 @@ class UIOverlayFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-//        return inflater.inflate(R.layout.fragment_u_i_overlay, container, false)
         binding = FragmentUIOverlayBinding.inflate(inflater, container, false)
         return binding.root
     }
