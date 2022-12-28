@@ -68,7 +68,8 @@ public class ServiceCube : MonoBehaviour, ICubeService
             AndroidJavaClass jc = new AndroidJavaClass("com.company.product.OverrideUnityActivity");
             AndroidJavaObject overrideActivity = jc.GetStatic<AndroidJavaObject>("instance");
             overrideActivity.Call("showMainActivity", lastStringColor);
-        } catch(Exception e)
+        } 
+        catch(Exception e)
         {
             AppendToText("Exception during ShowHostMainWindow");
             AppendToText(e.Message);

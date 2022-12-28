@@ -3,17 +3,11 @@
     "m_SelectedPackage": {
         "deviceId": "efab109761f0",
         "name": "com.unity.mynativeapp:Unity",
-        "processId": 31992,
+        "processId": 2088,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "efab109761f0",
-            "name": "com.unity.mynativeapp:Unity",
-            "processId": 27990,
-            "exited": true
-        },
         {
             "deviceId": "efab109761f0",
             "name": "com.android.launcher3",
@@ -36,12 +30,18 @@
             "deviceId": "efab109761f0",
             "name": "com.unity.mynativeapp",
             "processId": 31927,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "efab109761f0",
             "name": "com.unity.mynativeapp:Unity",
             "processId": 31992,
+            "exited": true
+        },
+        {
+            "deviceId": "efab109761f0",
+            "name": "com.unity.mynativeapp:Unity",
+            "processId": 2088,
             "exited": false
         }
     ],
