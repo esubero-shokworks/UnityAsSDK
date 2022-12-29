@@ -1,12 +1,12 @@
 package com.unity.mynativeapp;
 
+import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.R;
-import android.app.FragmentTransaction;
 import com.company.product.OverrideUnityActivity;
 
 public class MainUnityActivity extends OverrideUnityActivity implements UnityCommunication {
@@ -17,7 +17,7 @@ public class MainUnityActivity extends OverrideUnityActivity implements UnityCom
 
         UIOverlayFragment myOverlayFragment = new UIOverlayFragment();
         myOverlayFragment.setUnityPlayer(this);
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.add(R.id.content, myOverlayFragment).commit();
 //        addControlsToUnityFrame();
 
