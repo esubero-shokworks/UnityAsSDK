@@ -1,20 +1,26 @@
 package com.unity.mynativeapp;
 
+import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Process;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
-
+import android.R;
 import com.company.product.OverrideUnityActivity;
 
-public class MainUnityActivity extends OverrideUnityActivity {
+public class MainUnityActivity extends OverrideUnityActivity implements UnityCommunication {
     // Setup activity layout
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addControlsToUnityFrame();
+
+        UIOverlayFragment myOverlayFragment = new UIOverlayFragment();
+        myOverlayFragment.setUnityPlayer(this);
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.add(R.id.content, myOverlayFragment).commit();
+//        addControlsToUnityFrame();
+
         Intent intent = getIntent();
         handleIntent(intent);
     }
@@ -27,10 +33,10 @@ public class MainUnityActivity extends OverrideUnityActivity {
     }
 
     void handleIntent(Intent intent) {
-        if(intent == null || intent.getExtras() == null) return;
+        if (intent == null || intent.getExtras() == null) return;
 
-        if(intent.getExtras().containsKey("doQuit"))
-            if(mUnityPlayer != null) {
+        if (intent.getExtras().containsKey("doQuit"))
+            if (mUnityPlayer != null) {
                 finish();
             }
     }
@@ -43,7 +49,8 @@ public class MainUnityActivity extends OverrideUnityActivity {
         startActivity(intent);
     }
 
-    @Override public void onUnityPlayerUnloaded() {
+    @Override
+    public void onUnityPlayerUnloaded() {
         showMainActivity("");
     }
 
@@ -105,5 +112,25 @@ public class MainUnityActivity extends OverrideUnityActivity {
         }
     }
 
+
+    @Override
+    public void showMain() {
+        showMainActivity("");
+    }
+
+    @Override
+    public void sendMsg() {
+        mUnityPlayer.UnitySendMessage("Cube", "ChangeColor", "yellow");
+    }
+
+    @Override
+    public void unload() {
+        mUnityPlayer.unload();
+    }
+
+    @Override
+    public void finished() {
+        finish();
+    }
 
 }
