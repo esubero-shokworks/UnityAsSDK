@@ -57,21 +57,21 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent=".25" />
 
-    <com.otaliastudios.cameraview.CameraView
-        android:id="@+id/cv_video"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:cameraAudio="off"
-        app:cameraEngine="camera2"
-        app:cameraFacing="back"
-        app:cameraGesturePinch="zoom"
-        app:cameraGestureTap="autoFocus"
-        app:cameraMode="video"
-        app:cameraVideoMaxDuration="15000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <com.otaliastudios.cameraview.CameraView-->
+<!--        android:id="@+id/cv_video"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:cameraAudio="off"-->
+<!--        app:cameraEngine="camera2"-->
+<!--        app:cameraFacing="back"-->
+<!--        app:cameraGesturePinch="zoom"-->
+<!--        app:cameraGestureTap="autoFocus"-->
+<!--        app:cameraMode="video"-->
+<!--        app:cameraVideoMaxDuration="15000"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <ImageView
         android:id="@+id/iv_close"

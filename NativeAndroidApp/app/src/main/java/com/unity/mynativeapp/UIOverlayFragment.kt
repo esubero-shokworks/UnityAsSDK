@@ -23,7 +23,7 @@ class UIOverlayFragment : Fragment() {
                 isGrantAll = it.value
             }
             if (isGrantAll) {
-                binding.cvVideo.open()
+//                binding.cvVideo.open()
             } else {
                 requireActivity().finish()
             }
@@ -41,14 +41,14 @@ class UIOverlayFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         camera()
         btns()
-        requestPermissions()
+//        requestPermissions()
     }
 
     private fun camera() =
         binding.apply {
-            cvVideo.setLifecycleOwner(viewLifecycleOwner)
+//            cvVideo.setLifecycleOwner(viewLifecycleOwner)
             tvFlip.setOnClickListener {
-                cvVideo.toggleFacing()
+//                cvVideo.toggleFacing()
             }
             ivClose.setOnClickListener {
                 mUnity?.finished()
