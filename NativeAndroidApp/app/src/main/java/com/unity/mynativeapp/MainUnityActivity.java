@@ -9,6 +9,8 @@ import android.widget.FrameLayout;
 import android.R;
 import com.company.product.OverrideUnityActivity;
 
+import java.io.Console;
+
 public class MainUnityActivity extends OverrideUnityActivity implements UnityCommunication {
     // Setup activity layout
     @Override
@@ -77,7 +79,8 @@ public class MainUnityActivity extends OverrideUnityActivity implements UnityCom
             myButton.setY(500);
             myButton.setOnClickListener( new View.OnClickListener() {
                 public void onClick(View v) {
-                    mUnityPlayer.UnitySendMessage("Cube", "ChangeColor", "yellow");
+                    mUnityPlayer.UnitySendMessage("Service Manager", "DoChangeColor", "blue");
+                    System.out.println("Sending the Change Color to Unity");
                 }
             });
             layout.addView(myButton, 300, 200);

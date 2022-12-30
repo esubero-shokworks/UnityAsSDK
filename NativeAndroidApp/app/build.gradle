@@ -23,7 +23,7 @@ android {
 
     defaultConfig {
         applicationId "com.unity.mynativeapp"
-        minSdkVersion 24
+        minSdkVersion 27
         targetSdkVersion 31
         ndk {
             abiFilters "armeabi-v7a", "arm64-v8a"

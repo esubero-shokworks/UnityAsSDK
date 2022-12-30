@@ -33,6 +33,18 @@
             android:hardwareAccelerated="false"
             android:process=":Unity">
         </activity>
+
     </application>
+
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="false" />
+    <uses-feature
+        android:name="com.google.ar.core.depth"
+        android:required="false" />
+    <meta-data
+        android:name="com.google.ar.core"
+        android:value="optional" />
+    <uses-feature android:glEsVersion="0x00020000" />
 
 </manifest>
