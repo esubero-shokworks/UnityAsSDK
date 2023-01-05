@@ -49,7 +49,7 @@ class UIOverlayFragment : Fragment() {
         binding.apply {
 //            cvVideo.setLifecycleOwner(viewLifecycleOwner)
             tvFlip.setOnClickListener {
-                UnityPlayer.UnitySendMessage("Service Manager", "DoChangeARCamera", "blue")
+                UnityPlayer.UnitySendMessage("Service Manager", "DoChangeARCamera", "")
                 println("Sending the DoChangeCamera to Unity")
                 //                cvVideo.toggleFacing()
             }

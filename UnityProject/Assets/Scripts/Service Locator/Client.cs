@@ -20,10 +20,10 @@ public class Client : MonoBehaviour
         ServiceLocator.Instance.GetService<IARService>().DestroyARObject(objectNameToDestroy);
     }
 
-    public void DoChangeARCamera(string targetCamera) //maybe an internal switch
+    public void DoChangeARCamera()
     {
         Debug.Log("Receiving the ChangeARCamera command");
-        ServiceLocator.Instance.GetService<IARService>().ChangeARCamera(targetCamera);
+        ServiceLocator.Instance.GetService<IARService>().ChangeARCamera();
     }
 
     public void DoStartCameraRecording()
