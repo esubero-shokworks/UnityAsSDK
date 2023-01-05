@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <item name="unitySurfaceView" type="id"/>
     <string name="FreeformWindowOrientation_landscape"/>
     <string name="FreeformWindowOrientation_portrait"/>
     <string name="FreeformWindowSize_maximize"/>
