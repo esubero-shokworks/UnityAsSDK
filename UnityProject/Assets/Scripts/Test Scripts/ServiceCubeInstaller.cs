@@ -8,6 +8,6 @@ public class ServiceCubeInstaller : MonoBehaviour
 
     private void Awake()
     {
-        ServiceLocator.Instance.RegisterService(cubeService);
+        ServiceLocator.Instance.RegisterService<ICubeService>(cubeService);
     }
 }
