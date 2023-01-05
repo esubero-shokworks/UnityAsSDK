@@ -4,5 +4,5 @@ internal interface IARService
 
     void DestroyARObject(string objectNameToDestroy);
 
-    void ChangeARCamera(string targetCamera);
+    void ChangeARCamera();
 }
