@@ -2,46 +2,46 @@
     "m_SelectedDeviceId": "efab109761f0",
     "m_SelectedPackage": {
         "deviceId": "efab109761f0",
-        "name": "com.unity.mynativeapp:Unity",
-        "processId": 2088,
+        "name": "com.DefaultCompany.UaaLExample",
+        "processId": 27438,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "efab109761f0",
+            "name": "com.DefaultCompany.UaaLExample",
+            "processId": 19015,
+            "exited": true
+        },
+        {
+            "deviceId": "efab109761f0",
+            "name": "com.DefaultCompany.UaaLExample",
+            "processId": 22603,
+            "exited": true
+        },
+        {
+            "deviceId": "efab109761f0",
+            "name": "com.DefaultCompany.UaaLExample",
+            "processId": 25570,
+            "exited": true
+        },
+        {
+            "deviceId": "efab109761f0",
+            "name": "com.DefaultCompany.UaaLExample",
+            "processId": 26397,
+            "exited": true
+        },
+        {
+            "deviceId": "efab109761f0",
             "name": "com.android.launcher3",
-            "processId": 2769,
+            "processId": 2796,
             "exited": false
         },
         {
             "deviceId": "efab109761f0",
-            "name": "com.unity.mynativeapp",
-            "processId": 30594,
-            "exited": true
-        },
-        {
-            "deviceId": "efab109761f0",
-            "name": "com.unity.mynativeapp:Unity",
-            "processId": 30643,
-            "exited": true
-        },
-        {
-            "deviceId": "efab109761f0",
-            "name": "com.unity.mynativeapp",
-            "processId": 31927,
-            "exited": true
-        },
-        {
-            "deviceId": "efab109761f0",
-            "name": "com.unity.mynativeapp:Unity",
-            "processId": 31992,
-            "exited": true
-        },
-        {
-            "deviceId": "efab109761f0",
-            "name": "com.unity.mynativeapp:Unity",
-            "processId": 2088,
+            "name": "com.DefaultCompany.UaaLExample",
+            "processId": 27438,
             "exited": false
         }
     ],

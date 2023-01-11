@@ -1,8 +1,9 @@
 using System;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 
-public class ServiceAR : MonoBehaviour, IARService
+public class ServiceARGeneralManagement : MonoBehaviour, IARGeneralManagementService
 {
     [SerializeField] private ARCameraManager cameraManager;
     private CameraFacingDirection currentFacingDirection = CameraFacingDirection.World;
@@ -29,17 +30,5 @@ public class ServiceAR : MonoBehaviour, IARService
             Utils.CommunicateErrorWithNative(thrownException, this);
             throw;
         }
-    }
-
-    public void DestroyARObject(string objectNameToDestroy)
-    {
-        string uiState = $"Called to DestroyARObject with the attribute {objectNameToDestroy}";
-        Utils.UpdateUIState(uiState);
-    }
-
-    public void InstantiateARObject(string objectNameToInstantiate)
-    {
-        string uiState = $"Called to InstantiateARObject with the attribute {objectNameToInstantiate}";
-        Utils.UpdateUIState(uiState);
     }
 }
