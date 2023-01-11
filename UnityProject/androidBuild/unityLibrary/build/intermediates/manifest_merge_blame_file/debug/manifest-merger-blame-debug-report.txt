@@ -16,131 +16,134 @@
 12    <uses-permission android:name="android.permission.INTERNET" />
 12-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:21:3-65
 12-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:21:20-62
-13
-14    <uses-feature
-14-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:22:3-88
-15        android:name="android.hardware.touchscreen"
-15-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:22:17-60
-16        android:required="false" />
-16-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:22:61-85
-17    <uses-feature
-17-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:23:3-99
-18        android:name="android.hardware.touchscreen.multitouch"
-18-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:23:17-71
-19        android:required="false" />
-19-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:23:72-96
-20    <uses-feature
-20-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:24:3-108
-21        android:name="android.hardware.touchscreen.multitouch.distinct"
-21-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:24:17-80
-22        android:required="false" />
-22-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:24:81-105
-23
-24    <uses-permission android:name="android.permission.CAMERA" />
-24-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:25:3-63
-24-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:25:20-60
-25
-26    <uses-feature
-26-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:26:3-85
-27        android:name="android.hardware.camera.ar"
-27-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:26:17-58
-28        android:required="true" />
-28-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:26:59-82
-29    <uses-feature
-29-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:27:3-83
-30        android:name="com.google.ar.core.depth"
-30-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:27:17-56
-31        android:required="true" />
-31-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:27:57-80
-32
-33    <application android:extractNativeLibs="true" >
-33-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:3:3-19:17
-33-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:3:16-48
-34        <activity
-34-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:4:5-11:16
-35            android:name="com.unity3d.player.UnityPlayerActivity"
-35-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:4:15-68
-36            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
-36-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:4:180-361
-37            android:exported="true"
-37-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:4:433-456
-38            android:hardwareAccelerated="false"
-38-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:4:397-432
-39            android:launchMode="singleTask"
-39-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:4:148-179
-40            android:resizeableActivity="false"
-40-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:4:362-396
-41            android:screenOrientation="fullUser"
-41-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:4:111-147
-42            android:theme="@style/UnityThemeSelector" >
-42-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:4:69-110
-43            <intent-filter>
-43-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:5:7-8:23
-44                <action android:name="android.intent.action.MAIN" />
-44-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:6:9-61
-44-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:6:17-58
-45
-46                <category android:name="android.intent.category.LAUNCHER" />
-46-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:7:9-69
-46-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:7:19-66
-47            </intent-filter>
-48
-49            <meta-data
-49-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:9:7-82
-50                android:name="unityplayer.UnityActivity"
-50-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:9:18-58
-51                android:value="true" />
-51-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:9:59-79
-52            <meta-data
-52-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:10:7-78
-53                android:name="android.notch_support"
-53-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:10:18-54
-54                android:value="true" />
-54-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:10:55-75
-55        </activity>
-56
-57        <meta-data
-57-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:12:5-69
-58            android:name="unity.splash-mode"
-58-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:12:16-48
-59            android:value="0" />
-59-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:12:49-66
-60        <meta-data
-60-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:13:5-74
-61            android:name="unity.splash-enable"
-61-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:13:16-50
-62            android:value="True" />
-62-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:13:51-71
-63        <meta-data
-63-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:14:5-78
-64            android:name="unity.launch-fullscreen"
-64-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:14:16-54
-65            android:value="True" />
-65-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:14:55-75
-66        <meta-data
-66-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:15:5-84
-67            android:name="unity.allow-resizable-window"
-67-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:15:16-59
-68            android:value="False" />
-68-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:15:60-81
-69        <meta-data
-69-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:16:5-81
-70            android:name="notch.config"
-70-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:16:16-43
-71            android:value="portrait|landscape" />
-71-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:16:44-78
-72        <meta-data
-72-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:17:5-88
-73            android:name="unityplayer.SkipPermissionsDialog"
-73-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:17:16-64
-74            android:value="true" />
-74-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:17:65-85
-75        <meta-data
-75-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:18:5-77
-76            android:name="com.google.ar.core"
-76-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:18:16-49
-77            android:value="required" />
-77-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:18:50-74
-78    </application>
-79
-80</manifest>
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:22:3-79
+13-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:22:20-76
+14
+15    <uses-feature
+15-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:23:3-88
+16        android:name="android.hardware.touchscreen"
+16-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:23:17-60
+17        android:required="false" />
+17-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:23:61-85
+18    <uses-feature
+18-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:24:3-99
+19        android:name="android.hardware.touchscreen.multitouch"
+19-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:24:17-71
+20        android:required="false" />
+20-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:24:72-96
+21    <uses-feature
+21-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:25:3-108
+22        android:name="android.hardware.touchscreen.multitouch.distinct"
+22-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:25:17-80
+23        android:required="false" />
+23-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:25:81-105
+24
+25    <uses-permission android:name="android.permission.CAMERA" />
+25-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:26:3-63
+25-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:26:20-60
+26
+27    <uses-feature
+27-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:27:3-85
+28        android:name="android.hardware.camera.ar"
+28-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:27:17-58
+29        android:required="true" />
+29-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:27:59-82
+30    <uses-feature
+30-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:28:3-83
+31        android:name="com.google.ar.core.depth"
+31-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:28:17-56
+32        android:required="true" />
+32-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:28:57-80
+33
+34    <application android:extractNativeLibs="true" >
+34-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:3:3-19:17
+34-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:3:16-48
+35        <activity
+35-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:4:5-11:16
+36            android:name="com.unity3d.player.UnityPlayerActivity"
+36-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:4:15-68
+37            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+37-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:4:180-361
+38            android:exported="true"
+38-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:4:433-456
+39            android:hardwareAccelerated="false"
+39-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:4:397-432
+40            android:launchMode="singleTask"
+40-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:4:148-179
+41            android:resizeableActivity="false"
+41-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:4:362-396
+42            android:screenOrientation="fullUser"
+42-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:4:111-147
+43            android:theme="@style/UnityThemeSelector" >
+43-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:4:69-110
+44            <intent-filter>
+44-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:5:7-8:23
+45                <action android:name="android.intent.action.MAIN" />
+45-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:6:9-61
+45-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:6:17-58
+46
+47                <category android:name="android.intent.category.LAUNCHER" />
+47-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:7:9-69
+47-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:7:19-66
+48            </intent-filter>
+49
+50            <meta-data
+50-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:9:7-82
+51                android:name="unityplayer.UnityActivity"
+51-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:9:18-58
+52                android:value="true" />
+52-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:9:59-79
+53            <meta-data
+53-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:10:7-78
+54                android:name="android.notch_support"
+54-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:10:18-54
+55                android:value="true" />
+55-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:10:55-75
+56        </activity>
+57
+58        <meta-data
+58-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:12:5-69
+59            android:name="unity.splash-mode"
+59-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:12:16-48
+60            android:value="0" />
+60-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:12:49-66
+61        <meta-data
+61-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:13:5-74
+62            android:name="unity.splash-enable"
+62-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:13:16-50
+63            android:value="True" />
+63-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:13:51-71
+64        <meta-data
+64-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:14:5-78
+65            android:name="unity.launch-fullscreen"
+65-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:14:16-54
+66            android:value="True" />
+66-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:14:55-75
+67        <meta-data
+67-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:15:5-84
+68            android:name="unity.allow-resizable-window"
+68-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:15:16-59
+69            android:value="False" />
+69-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:15:60-81
+70        <meta-data
+70-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:16:5-81
+71            android:name="notch.config"
+71-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:16:16-43
+72            android:value="portrait|landscape" />
+72-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:16:44-78
+73        <meta-data
+73-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:17:5-88
+74            android:name="unityplayer.SkipPermissionsDialog"
+74-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:17:16-64
+75            android:value="true" />
+75-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:17:65-85
+76        <meta-data
+76-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:18:5-77
+77            android:name="com.google.ar.core"
+77-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:18:16-49
+78            android:value="required" />
+78-->G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:18:50-74
+79    </application>
+80
+81</manifest>

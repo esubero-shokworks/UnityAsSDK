@@ -8,22 +8,22 @@ public class Client : MonoBehaviour
         ServiceLocator.Instance.GetService<ICubeService>().ChangeColor(newColor);
     }
 
-    public void DoInstantiateARObject(string objectNameToInstantiate)
+    public void DoInstantiateARObject(string pathObjectToInstantiate)
     {
         Debug.Log("Receiving the InstantiateARObject command");
-        ServiceLocator.Instance.GetService<IARService>().InstantiateARObject(objectNameToInstantiate);
+        ServiceLocator.Instance.GetService<IARObjectManagementService>().InstantiateARObject(pathObjectToInstantiate);
     }
 
-    public void DoDestroyARObject(string objectNameToDestroy)
+    public void DoDestroyARObject()
     {
         Debug.Log("Receiving the DestroyARObject command");
-        ServiceLocator.Instance.GetService<IARService>().DestroyARObject(objectNameToDestroy);
+        ServiceLocator.Instance.GetService<IARObjectManagementService>().DestroyARObject();
     }
 
     public void DoChangeARCamera()
     {
         Debug.Log("Receiving the ChangeARCamera command");
-        ServiceLocator.Instance.GetService<IARService>().ChangeARCamera();
+        ServiceLocator.Instance.GetService<IARGeneralManagementService>().ChangeARCamera();
     }
 
     public void DoStartCameraRecording()

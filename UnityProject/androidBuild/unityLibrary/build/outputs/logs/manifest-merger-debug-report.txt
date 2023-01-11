@@ -1,8 +1,8 @@
 -- Merging decision tree log ---
 manifest
-ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:2:1-28:12
+ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:2:1-29:12
 	package
 		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:2:70-98
 		INJECTED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml
@@ -105,40 +105,44 @@ uses-permission#android.permission.INTERNET
 ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:21:3-65
 	android:name
 		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:21:20-62
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:22:3-79
+	android:name
+		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:22:20-76
 uses-feature#android.hardware.touchscreen
-ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:22:3-88
+ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:23:3-88
 	android:required
-		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:22:61-85
+		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:23:61-85
 	android:name
-		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:22:17-60
+		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:23:17-60
 uses-feature#android.hardware.touchscreen.multitouch
-ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:23:3-99
+ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:24:3-99
 	android:required
-		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:23:72-96
+		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:24:72-96
 	android:name
-		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:23:17-71
+		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:24:17-71
 uses-feature#android.hardware.touchscreen.multitouch.distinct
-ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:24:3-108
+ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:25:3-108
 	android:required
-		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:24:81-105
+		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:25:81-105
 	android:name
-		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:24:17-80
+		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:25:17-80
 uses-permission#android.permission.CAMERA
-ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:25:3-63
+ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:26:3-63
 	android:name
-		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:25:20-60
+		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:26:20-60
 uses-feature#android.hardware.camera.ar
-ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:26:3-85
+ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:27:3-85
 	android:required
-		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:26:59-82
+		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:27:59-82
 	android:name
-		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:26:17-58
+		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:27:17-58
 uses-feature#com.google.ar.core.depth
-ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:27:3-83
+ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:28:3-83
 	android:required
-		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:27:57-80
+		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:28:57-80
 	android:name
-		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:27:17-56
+		ADDED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml:28:17-56
 uses-sdk
 INJECTED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from G:\Documents\GameProjects\UnityAsSDK\UnityProject\androidBuild\unityLibrary\src\main\AndroidManifest.xml

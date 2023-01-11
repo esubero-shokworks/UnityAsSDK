@@ -49,11 +49,17 @@ class UIOverlayFragment : Fragment() {
         binding.apply {
 //            cvVideo.setLifecycleOwner(viewLifecycleOwner)
             tvFlip.setOnClickListener {
+                //UnityPlayer.UnitySendMessage("Service Manager", "DoInstantiateARObject", "SM_Bld_Bridge_Chair_01.obj")
+                //println("Sending the DoInstantiateARObject to Unity")
+
                 UnityPlayer.UnitySendMessage("Service Manager", "DoChangeARCamera", "")
                 println("Sending the DoChangeCamera to Unity")
                 //                cvVideo.toggleFacing()
             }
             lavRecordBtn.setOnClickListener(){
+                //UnityPlayer.UnitySendMessage("Service Manager", "DoDestroyARObject", "")
+                //println("Sending the DoDestroyARObject to Unity")
+                
                 isCameraRecording = !isCameraRecording
                 if (isCameraRecording){
                     UnityPlayer.UnitySendMessage("Service Manager", "DoStartCameraRecording", "")
