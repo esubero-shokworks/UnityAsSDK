@@ -937,7 +937,7 @@ MonoBehaviour:
   m_LightEstimationMode: -1
   m_AutoFocus: 1
   m_LightEstimation: 0
-  m_FacingDirection: 1
+  m_FacingDirection: 2
 --- !u!114 &721815421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1115,6 +1115,7 @@ GameObject:
   - component: {fileID: 891579904}
   - component: {fileID: 891579907}
   - component: {fileID: 891579906}
+  - component: {fileID: 891579908}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -1177,6 +1178,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arService: {fileID: 891579906}
+--- !u!114 &891579908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891579903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caeceacb624484daf8e379c2252fd246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FacePrefab: {fileID: 2962739138935674908, guid: 8b4a45bd3822c8d45ac771ad02577af9,
+    type: 3}
+  m_MaximumFaceCount: 1
 --- !u!1 &1282821208
 GameObject:
   m_ObjectHideFlags: 0
