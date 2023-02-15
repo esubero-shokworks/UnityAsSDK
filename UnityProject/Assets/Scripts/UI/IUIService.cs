@@ -1,4 +1,5 @@
 internal interface IUIService
 {
-    void UpdateState(string currentState);
+    void UpdateStatusLabel(string currentState);
+    void LoadingActivation(bool imageSwitch);
 }
