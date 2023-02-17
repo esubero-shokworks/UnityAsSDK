@@ -51,6 +51,11 @@ public class MainUnityActivity extends OverrideUnityActivity implements UnityCom
         startActivity(intent);
     }
 
+    public void GetCallbackMessage(String callbackMessage)
+    {
+        System.out.println(callbackMessage);
+    }
+
     @Override
     public void onUnityPlayerUnloaded() {
         showMainActivity("");

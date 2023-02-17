@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "R28M502RETV",
     "m_SelectedPackage": {
-        "deviceId": "efab109761f0",
-        "name": "com.DefaultCompany.UaaLExample",
-        "processId": 27438,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -43,6 +43,36 @@
             "name": "com.DefaultCompany.UaaLExample",
             "processId": 27438,
             "exited": false
+        },
+        {
+            "deviceId": "R28M502RETV",
+            "name": "com.DefaultCompany.UaaLExample",
+            "processId": 28889,
+            "exited": true
+        },
+        {
+            "deviceId": "R28M502RETV",
+            "name": "com.DefaultCompany.UaaLExample",
+            "processId": 15608,
+            "exited": true
+        },
+        {
+            "deviceId": "R28M502RETV",
+            "name": "com.sec.android.app.launcher",
+            "processId": 11709,
+            "exited": false
+        },
+        {
+            "deviceId": "R28M502RETV",
+            "name": "com.DefaultCompany.UaaLExample",
+            "processId": 22288,
+            "exited": true
+        },
+        {
+            "deviceId": "R28M502RETV",
+            "name": "com.DefaultCompany.UaaLExample",
+            "processId": 26831,
+            "exited": true
         }
     ],
     "m_Tags": {
