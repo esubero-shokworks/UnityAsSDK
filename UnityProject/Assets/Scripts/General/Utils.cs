@@ -3,11 +3,24 @@ using UnityEngine;
 
 public static class Utils
 {
+    public static void LoadingActivation(bool imageSwitch)
+    {
+        try
+        {
+            ServiceLocator.Instance.GetService<IUIService>().LoadingActivation(imageSwitch);
+        }
+        catch (Exception thrownException)
+        {
+            CommunicateErrorWithNative(thrownException);
+            throw;
+        }
+    }
+
     public static void UpdateUIState(string uiState)
     {
         try
         {
-            ServiceLocator.Instance.GetService<IUIService>().UpdateState(uiState);
+            ServiceLocator.Instance.GetService<IUIService>().UpdateStatusLabel(uiState);
         }
         catch (Exception thrownException)
         {
