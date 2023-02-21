@@ -19,7 +19,7 @@ public class PlaneGizmo : MonoBehaviour
     private void Start()
     {
         hits = new List<ARRaycastHit>();
-        Utils.LoadingActivation(true);
+        ServiceLocator.Instance.GetService<IUIService>().LoadingActivation(true);
     }
 
     private void Update()
@@ -28,21 +28,29 @@ public class PlaneGizmo : MonoBehaviour
 
         if (aRRaycastManager.Raycast(screenPosition, hits, TrackableType.PlaneWithinPolygon))
         {
-            Utils.LoadingActivation(false);
+            ServiceLocator.Instance.GetService<IUIService>().LoadingActivation(false);
             foreach (ARRaycastHit hit in hits)
             {
-                Pose pose = hit.pose;
-                if (decoyInstantiated == null)
+                try
                 {
-                    decoyInstantiated = Instantiate(decoyPrefab, pose.position, pose.rotation);
-                    uiState = $"ObjectInstantiated {DateTime.Now}";
-                    Utils.UpdateUIState(uiState);
+                    Pose pose = hit.pose;
+
+                    if (decoyInstantiated == null)
+                    {
+                        decoyInstantiated = Instantiate(decoyPrefab, pose.position, pose.rotation);
+                        uiState = $"ObjectInstantiated {DateTime.Now}";
+                    }
+                    else
+                    {
+                        decoyInstantiated.transform.SetPositionAndRotation(pose.position, pose.rotation);
+                        uiState = $"Object moved {DateTime.Now}";
+                    }
+                    ServiceLocator.Instance.GetService<IUIService>().UpdateStatusLabel(uiState);
                 }
-                else
+                catch (Exception thrownException)
                 {
-                    decoyInstantiated.transform.SetPositionAndRotation(pose.position, pose.rotation);
-                    uiState = $"Object moved {DateTime.Now}";
-                    Utils.UpdateUIState(uiState);
+                    ServiceLocator.Instance.GetService<ICallbackManagerService>().SendCallbackMessage($"PlaneGizmo: {thrownException.Message}");
+                    throw;
                 }
             }
         }

@@ -2,12 +2,6 @@ using UnityEngine;
 
 public class Client : MonoBehaviour
 {
-    public void DoChangeColor(string newColor)
-    {
-        Debug.Log("Receiving the ChangeColor command");
-        ServiceLocator.Instance.GetService<ICubeService>().ChangeColor(newColor);
-    }
-
     public void DoInstantiateARObject(string pathObjectToInstantiate)
     {
         Debug.Log("Receiving the InstantiateARObject command");
