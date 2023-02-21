@@ -34,20 +34,19 @@ public class InputController : Singleton<InputController>
     {
         inputs = new TouchControls();
         cameraTransform = Camera.main.transform;
-        Debug.LogWarning($"Input Controller awakened");
+        Debug.Log($"Input Controller awakened");
     }
 
     private void OnEnable()
     {
         inputs.Enable();
-        Debug.LogWarning($"Input Controller enabled");
+        Debug.Log($"Input Controller enabled");
     }
 
     private void OnDisable()
     {
         inputs.Disable();
-        Debug.LogWarning($"Input Controller disabled");
-
+        Debug.Log($"Input Controller disabled");
     }
 
     private void Start()
@@ -56,49 +55,83 @@ public class InputController : Singleton<InputController>
         inputs.Touch.PrimaryTouchPress.canceled += context => EndTouch(context);
         inputs.Touch.SecondaryTouchPress.started += context => StartZoom(context);
         inputs.Touch.SecondaryTouchPress.canceled += context => EndZoom(context);
-        Debug.LogWarning($"Input Controller Started");
+        Debug.Log($"Input Controller Started");
     }
     #endregion
 
+    #region Simple Touch
+    
     public void StartTouch(InputAction.CallbackContext context)
     {
-        Vector2 currentTouchPosition = inputs.Touch.PrimaryTouchPosition.ReadValue<Vector2>();
-        swipeStartPosition = currentTouchPosition;
-        swipeStartTime = Time.time;
+        try
+        {
+            Vector2 currentTouchPosition = inputs.Touch.PrimaryTouchPosition.ReadValue<Vector2>();
+            swipeStartPosition = currentTouchPosition;
+            swipeStartTime = Time.time;
 
-        Debug.LogWarning($"Touch started: {currentTouchPosition}");
+            Debug.Log($"Touch started: {currentTouchPosition}");
 
-        OnStartTouch?.Invoke(currentTouchPosition, (float)context.startTime);
+            OnStartTouch?.Invoke(currentTouchPosition, (float)context.startTime);
+        }
+        catch (Exception thrownException)
+        {
+            ServiceLocator.Instance.GetService<ICallbackManagerService>().SendCallbackMessage($"InputController: {thrownException.Message}");
+            throw;
+        }
     }
 
     public void EndTouch(InputAction.CallbackContext context)
     {
-        Vector2 currentTouchPosition = inputs.Touch.PrimaryTouchPosition.ReadValue<Vector2>();
-        swipeEndPosition = currentTouchPosition;
-        swipeEndTime = Time.time;
-
-        Debug.LogWarning($"Touch ended: {currentTouchPosition}");
-
-        OnEndTouch?.Invoke(currentTouchPosition, (float)context.time);
-        SwipeDetection();
-    }
-
-    private void SwipeDetection()
-    {
-        if (Vector2.Distance(swipeStartPosition, swipeEndPosition) >= minimunDistance && (swipeEndTime - swipeStartTime) <= maximumTime)
+        try
         {
-            Debug.DrawLine(swipeStartPosition, swipeEndPosition, Color.red, 5f);
+            Vector2 currentTouchPosition = inputs.Touch.PrimaryTouchPosition.ReadValue<Vector2>();
+            swipeEndPosition = currentTouchPosition;
+            swipeEndTime = Time.time;
 
-            Vector3 direction = swipeEndPosition - swipeStartPosition;
-            Vector2 direction2D = new Vector2(direction.x, direction.y).normalized;
+            Debug.Log($"Touch ended: {currentTouchPosition}");
 
-            SwipeDirection directionName = GetDirection(direction2D);
-            
-            Debug.LogWarning($"Swipe Detected and it's going to {directionName}");
-            OnSwipe?.Invoke(direction2D, directionName);
+            OnEndTouch?.Invoke(currentTouchPosition, (float)context.time);
+            SwipeDetection();
+        }
+        catch (Exception thrownException)
+        {
+            ServiceLocator.Instance.GetService<ICallbackManagerService>().SendCallbackMessage($"InputController: {thrownException.Message}");
+            throw;
         }
     }
 
+    #endregion
+
+    #region Swipe
+    
+    private void SwipeDetection()
+    {
+        try
+        {
+            if (Vector2.Distance(swipeStartPosition, swipeEndPosition) >= minimunDistance && (swipeEndTime - swipeStartTime) <= maximumTime)
+            {
+                Debug.DrawLine(swipeStartPosition, swipeEndPosition, Color.red, 5f);
+
+                Vector3 direction = swipeEndPosition - swipeStartPosition;
+                Vector2 direction2D = new Vector2(direction.x, direction.y).normalized;
+
+                SwipeDirection directionName = GetDirection(direction2D);
+
+                Debug.Log($"Swipe Detected and it's going to {directionName}");
+                OnSwipe?.Invoke(direction2D, directionName);
+            }
+        }
+        catch (Exception thrownException)
+        {
+            ServiceLocator.Instance.GetService<ICallbackManagerService>().SendCallbackMessage($"InputController: {thrownException.Message}");
+            throw;
+        }
+    }
+
+    #endregion
+
+    #region Zoom
+    
     private void StartZoom(InputAction.CallbackContext context)
     {
         zoomCoroutine = StartCoroutine(ZoomDetection());
@@ -112,33 +145,40 @@ public class InputController : Singleton<InputController>
     private IEnumerator ZoomDetection()
     {
         float previousDistance = 0f;
-        float distance = 0f;
         while (true)
         {
-            distance = Vector2.Distance(inputs.Touch.PrimaryTouchPosition.ReadValue<Vector2>(), inputs.Touch.SecondaryTouchPosition.ReadValue<Vector2>());
-            bool doZoom = false;
-            Vector3 targetPosition = cameraTransform.position;
+            try
+            {
+                float distance = Vector2.Distance(inputs.Touch.PrimaryTouchPosition.ReadValue<Vector2>(), inputs.Touch.SecondaryTouchPosition.ReadValue<Vector2>());
+                bool doZoom = false;
+                Vector3 targetPosition = cameraTransform.position;
 
-            if (distance > previousDistance)
-            {
-                //Zoom Out
-                targetPosition.z -= 1f;
-                doZoom = true;
-                Debug.LogWarning("Zoom out");
-            }
-            else if (distance < previousDistance)
-            {
-                //Zoom In
-                targetPosition.z += 1f;
-                doZoom = true;
-                Debug.LogWarning("Zoom In");
-            }
+                if (distance > previousDistance)
+                {
+                    //Zoom Out
+                    targetPosition.z -= 1f;
+                    doZoom = true;
+                    Debug.Log("Zoom out");
+                }
+                else if (distance < previousDistance)
+                {
+                    //Zoom In
+                    targetPosition.z += 1f;
+                    doZoom = true;
+                    Debug.Log("Zoom In");
+                }
 
-            if (doZoom)
-            {
-                cameraTransform.position = Vector3.Slerp(cameraTransform.position, targetPosition, Time.deltaTime * cameraSpeed);
+                if (doZoom)
+                {
+                    cameraTransform.position = Vector3.Slerp(cameraTransform.position, targetPosition, Time.deltaTime * cameraSpeed);
+                }
+                previousDistance = distance;
             }
-            previousDistance = distance;
+            catch (Exception thrownException)
+            {
+                ServiceLocator.Instance.GetService<ICallbackManagerService>().SendCallbackMessage($"InputController: {thrownException.Message}");
+                throw;
+            }
             yield return null;
         }
     }
@@ -187,4 +227,6 @@ public class InputController : Singleton<InputController>
 
         return SwipeDirection.None;
     }
+    
+    #endregion
 }

@@ -17,36 +17,57 @@ public class ServiceARObjectManagement : MonoBehaviour, IARObjectManagementServi
             StartCoroutine(GetFileAndInstantiate(url));
 
             string uiState = $"Called InstantiateARObject of {pathObjectToInstantiate}";
-            Utils.UpdateUIState(uiState);
+            ServiceLocator.Instance.GetService<IUIService>().UpdateStatusLabel(uiState);
 
         }
         catch (Exception thrownException)
         {
-            Utils.CommunicateErrorWithNative(thrownException, this);
+            ServiceLocator.Instance.GetService<ICallbackManagerService>().SendCallbackMessage($"ServiceARObjectManagement: {thrownException.Message}");
             throw;
         }
     }
 
     public void DestroyARObject()
     {
-        foreach (Transform arObject in objectLocation)
+        try
         {
-            Destroy(arObject.gameObject);
+            foreach (Transform arObject in objectLocation)
+            {
+                Destroy(arObject.gameObject);
+            }
+            string uiState = $"Called to DestroyARObject";
+            ServiceLocator.Instance.GetService<IUIService>().UpdateStatusLabel(uiState);
         }
-        string uiState = $"Called to DestroyARObject";
-        Utils.UpdateUIState(uiState);
+        catch (Exception thrownException)
+        {
+            ServiceLocator.Instance.GetService<ICallbackManagerService>().SendCallbackMessage($"ServiceARObjectManagement: {thrownException.Message}");
+            throw;
+        }
     }
 
     private IEnumerator GetFileAndInstantiate(string uri)
     {
         Debug.Log(uri);
+        GameObject objectFromPath;
+        try
+        {
+            objectFromPath = new OBJLoader().Load(uri);
+            //Texture oldTexture = objectFromPath.GetComponent<Renderer>().material.mainTexture;
+            //objectFromPath.GetComponent<Renderer>().material = basicMaterial;
+            //objectFromPath.GetComponent<Renderer>().material.SetTexture("oldTexture", oldTexture);
+        }
+        catch (Exception thrownException)
+        {
+            ServiceLocator.Instance.GetService<ICallbackManagerService>().SendCallbackMessage($"ServiceARObjectManagement: {thrownException.Message}");
+            throw;
+        }
 
-        GameObject objectFromPath = new OBJLoader().Load(uri);
-        //Texture oldTexture = objectFromPath.GetComponent<Renderer>().material.mainTexture;
-        //objectFromPath.GetComponent<Renderer>().material = basicMaterial;
-        //objectFromPath.GetComponent<Renderer>().material.SetTexture("oldTexture", oldTexture);
         yield return null;
-        GameObject objectInUnity = Instantiate(objectFromPath, objectLocation);
-        objectInUnity.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+
+        if (objectFromPath != null)
+        {
+            GameObject objectInUnity = Instantiate(objectFromPath, objectLocation);
+            objectInUnity.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+        }
     }
 }

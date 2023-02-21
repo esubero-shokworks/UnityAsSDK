@@ -1,5 +1,4 @@
 using System;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 
@@ -20,14 +19,15 @@ public class ServiceARGeneralManagement : MonoBehaviour, IARGeneralManagementSer
             {
                 currentFacingDirection = CameraFacingDirection.World;
             }
-            //TODO: Need more testing with a new phone
+
             cameraManager.requestedFacingDirection = currentFacingDirection;
             string uiState = $"The Camera is now looking to {currentFacingDirection} direction";
-            Utils.UpdateUIState(uiState);
+
+            ServiceLocator.Instance.GetService<IUIService>().UpdateStatusLabel(uiState);
         }
         catch (Exception thrownException)
         {
-            Utils.CommunicateErrorWithNative(thrownException, this);
+            ServiceLocator.Instance.GetService<ICallbackManagerService>().SendCallbackMessage($"ServiceARGeneralManagement: {thrownException.Message}");
             throw;
         }
     }
