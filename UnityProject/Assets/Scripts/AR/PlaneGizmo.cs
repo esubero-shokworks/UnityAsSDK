@@ -19,7 +19,7 @@ public class PlaneGizmo : MonoBehaviour
     private void Start()
     {
         hits = new List<ARRaycastHit>();
-        ServiceLocator.Instance.GetService<IUIService>().LoadingActivation(true);
+        ServiceLocator.Instance.GetService<IUIService>().LoadingGizmoActivation(true);
     }
 
     private void Update()
@@ -28,7 +28,7 @@ public class PlaneGizmo : MonoBehaviour
 
         if (aRRaycastManager.Raycast(screenPosition, hits, TrackableType.PlaneWithinPolygon))
         {
-            ServiceLocator.Instance.GetService<IUIService>().LoadingActivation(false);
+            ServiceLocator.Instance.GetService<IUIService>().LoadingGizmoActivation(false);
             foreach (ARRaycastHit hit in hits)
             {
                 try
