@@ -338,6 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingImage: {fileID: 977986736363963828}
   downloadImage: {fileID: 3519383786884303541}
+  downloadImageParent: {fileID: 1647246606455962740}
   stateLabel: {fileID: 977986735297658753}
 --- !u!1 &977986736363963786
 GameObject:
@@ -392,7 +393,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977986736363963786}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -432,7 +433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2657237315886679059
 RectTransform:
   m_ObjectHideFlags: 0

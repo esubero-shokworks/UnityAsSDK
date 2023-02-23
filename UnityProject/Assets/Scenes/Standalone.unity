@@ -182,7 +182,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -277,7 +277,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &705507996
 MonoBehaviour:
@@ -477,8 +477,6 @@ GameObject:
   - component: {fileID: 891579906}
   - component: {fileID: 891579908}
   - component: {fileID: 891579909}
-  - component: {fileID: 891579911}
-  - component: {fileID: 891579910}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -513,7 +511,7 @@ Transform:
   m_Children:
   - {fileID: 721815423}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &891579906
 MonoBehaviour:
@@ -568,39 +566,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlanePrefab: {fileID: 4776765576899091622, guid: 3738bd65ede154463b2c35064b9e5fdb,
+  m_PlanePrefab: {fileID: 4776765576899091622, guid: e97f3849e436cc04cb790fde3c526790,
     type: 3}
   m_DetectionMode: -1
---- !u!114 &891579910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 891579903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bd7b95e8f7f33c4984dbb8589d92150, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  decoyPrefab: {fileID: 5825931701484397289, guid: f9abe8ade58f08944ac41946263889c9,
-    type: 3}
-  aRRaycastManager: {fileID: 891579911}
-  aRPlaneManager: {fileID: 891579909}
-  arCamera: {fileID: 721815418}
---- !u!114 &891579911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 891579903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RaycastPrefab: {fileID: 0}
 --- !u!1 &1490062853
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,7 +635,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1359630626983392593
 PrefabInstance:
@@ -684,7 +652,7 @@ PrefabInstance:
     - target: {fileID: 1359630627323789338, guid: 52e3daefac87861478982ad27100ca8e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1359630627323789338, guid: 52e3daefac87861478982ad27100ca8e,
         type: 3}
@@ -886,7 +854,7 @@ PrefabInstance:
     - target: {fileID: 8092440978460995104, guid: c42cfa1b674e88941baee3c246e132fa,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8092440978460995104, guid: c42cfa1b674e88941baee3c246e132fa,
         type: 3}
@@ -901,7 +869,7 @@ PrefabInstance:
     - target: {fileID: 8092440978460995104, guid: c42cfa1b674e88941baee3c246e132fa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8092440978460995104, guid: c42cfa1b674e88941baee3c246e132fa,
         type: 3}
@@ -970,7 +938,7 @@ PrefabInstance:
     - target: {fileID: 8885887638217351847, guid: 069e2bb36f338c54cb392be4b7a5fda9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8885887638217351847, guid: 069e2bb36f338c54cb392be4b7a5fda9,
         type: 3}
