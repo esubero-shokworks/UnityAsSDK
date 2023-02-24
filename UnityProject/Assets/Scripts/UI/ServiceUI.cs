@@ -4,20 +4,40 @@ using UnityEngine.UI;
 
 public class ServiceUI : MonoBehaviour, IUIService
 {
+    [SerializeField] private TMP_Text stateLabel;
+    [Header("Loading Gizmo")]
     [SerializeField] private Image loadingImage;
+    [Header("Download Gizmo")]
     [SerializeField] private Image downloadImage;
     [SerializeField] private GameObject downloadImageParent;
-    [SerializeField] private TMP_Text stateLabel;
+    [Header("Put Object Gizmo")]
+    [SerializeField] private Image putObjectImage;
 
     private void Awake()
     {
         LoadingGizmoActivation(false);
         DownloadGizmoActivation(false);
+        PutObjectGizmoActivation(false);
     }
 
     public void UpdateStatusLabel(string currentState)
     {
         stateLabel.text = currentState;
+    }
+
+    public void PutObjectGizmoActivation(bool isActive)
+    {
+        if (putObjectImage.enabled == isActive)
+        {
+            return;
+        }
+
+        putObjectImage.enabled = isActive;
+
+        if (isActive)
+        {
+            LeanTween.scale(putObjectImage.gameObject, Vector3.one / 1.5f, 0.8f).setEase(LeanTweenType.easeOutSine).setLoopPingPong();
+        }
     }
 
     public void LoadingGizmoActivation(bool imageSwitch)
