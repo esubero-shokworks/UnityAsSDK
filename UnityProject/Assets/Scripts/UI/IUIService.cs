@@ -1,5 +1,7 @@
 internal interface IUIService
 {
     void UpdateStatusLabel(string currentState);
-    void LoadingActivation(bool imageSwitch);
+    void LoadingGizmoActivation(bool imageSwitch);
+    void DownloadGizmoActivation(bool isDownloading);
+    void PutObjectGizmoActivation(bool isDownloading);
 }

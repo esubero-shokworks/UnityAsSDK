@@ -12,6 +12,7 @@ public class InputController : Singleton<InputController>
 
     private TouchControls inputs;
 
+    private bool isHoldingTouch;
     private float swipeStartTime;
     private float swipeEndTime;
     private Vector2 swipeStartPosition;
@@ -21,9 +22,11 @@ public class InputController : Singleton<InputController>
     private Coroutine zoomCoroutine;
 
     #region Events
-    public delegate void StartTouchEvent(Vector2 position, float time);
+    public delegate void StartTouchEvent(Vector2 position);
     public event StartTouchEvent OnStartTouch;
-    public delegate void EndTouchEvent(Vector2 position, float time);
+    public delegate void HoldingTouchEvent(Vector2 position);
+    public event HoldingTouchEvent OnHoldingTouch;
+    public delegate void EndTouchEvent(Vector2 position);
     public event EndTouchEvent OnEndTouch;
     public delegate void SwipeEvent(Vector2 directionValue, SwipeDirection directionName);
     public event SwipeEvent OnSwipe;
@@ -55,12 +58,19 @@ public class InputController : Singleton<InputController>
         inputs.Touch.PrimaryTouchPress.canceled += context => EndTouch(context);
         inputs.Touch.SecondaryTouchPress.started += context => StartZoom(context);
         inputs.Touch.SecondaryTouchPress.canceled += context => EndZoom(context);
+
         Debug.Log($"Input Controller Started");
     }
+
+    private void Update()
+    {
+        HoldingTouch();
+    }
+
     #endregion
 
     #region Simple Touch
-    
+
     public void StartTouch(InputAction.CallbackContext context)
     {
         try
@@ -70,8 +80,9 @@ public class InputController : Singleton<InputController>
             swipeStartTime = Time.time;
 
             Debug.Log($"Touch started: {currentTouchPosition}");
+            isHoldingTouch = true;
 
-            OnStartTouch?.Invoke(currentTouchPosition, (float)context.startTime);
+            OnStartTouch?.Invoke(currentTouchPosition);
         }
         catch (Exception thrownException)
         {
@@ -89,8 +100,9 @@ public class InputController : Singleton<InputController>
             swipeEndTime = Time.time;
 
             Debug.Log($"Touch ended: {currentTouchPosition}");
+            isHoldingTouch = false;
 
-            OnEndTouch?.Invoke(currentTouchPosition, (float)context.time);
+            OnEndTouch?.Invoke(currentTouchPosition);
             SwipeDetection();
         }
         catch (Exception thrownException)
@@ -102,8 +114,19 @@ public class InputController : Singleton<InputController>
 
     #endregion
 
+    #region Holding Touch
+    private void HoldingTouch()
+    {
+        if (isHoldingTouch)
+        {
+            OnHoldingTouch?.Invoke(inputs.Touch.PrimaryTouchPosition.ReadValue<Vector2>());
+        }
+    }
+
+    #endregion
+
     #region Swipe
-    
+
     private void SwipeDetection()
     {
         try
