@@ -8,19 +8,21 @@ using UnityEngine.XR.ARSubsystems;
 
 public class ServiceARObjectManagement : MonoBehaviour, IARObjectManagementService
 {
+    [SerializeField] private ARPlaneManager arPlaneManager;
     [SerializeField] private ARRaycastManager raycastManager;
     [SerializeField] private Transform objectLocation;
     [SerializeField] private Material basicMaterial;
     private GameObject objectToInstantiate;
     private GameObject objectInstantiated;
-    private bool readyToInstantiateObject = true;
+    private bool readyToInstantiateObject;
     private int callCount;
 
     private void Start()
     {
-        readyToInstantiateObject = true;
+        readyToInstantiateObject = false;
         InputController.Instance.OnHoldingTouch += DetectedDraggingCommand;
         InputController.Instance.OnEndTouch += DetectPutCommand;
+        arPlaneManager.planesChanged += UpdatePlaneDetectionStatus;
     }
 
     private void OnDisable()
@@ -33,6 +35,7 @@ public class ServiceARObjectManagement : MonoBehaviour, IARObjectManagementServi
     {
         if (readyToInstantiateObject)
         {
+            Debug.Log("instantiating");
             InstantiateARObject(position);
         }
     }
@@ -40,8 +43,9 @@ public class ServiceARObjectManagement : MonoBehaviour, IARObjectManagementServi
     private void DetectedDraggingCommand(Vector2 position)
     {
         callCount++;
-        if (callCount > 4 && callCount % 2 == 0)
+        if (callCount % 2 == 0)
         {
+            Debug.Log("happening");
             RelocateARObject(position);
         }
     }
@@ -176,5 +180,17 @@ public class ServiceARObjectManagement : MonoBehaviour, IARObjectManagementServi
         objectToInstantiate.transform.SetLocalPositionAndRotation(targetPosition, targetRotation);
 
         return objectToInstantiate;
+    }
+
+    private void UpdatePlaneDetectionStatus(ARPlanesChangedEventArgs obj)
+    {
+        if (arPlaneManager.trackables.count <= 0)
+        {
+            readyToInstantiateObject = false;
+        }
+        else 
+        {
+            readyToInstantiateObject = true;
+        }
     }
 }

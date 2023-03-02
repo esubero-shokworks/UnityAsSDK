@@ -119,7 +119,7 @@ public class InputController : Singleton<InputController>
     {
         if (isHoldingTouch)
         {
-            OnHoldingTouch?.Invoke(inputs.Touch.PrimaryTouchInput.ReadValue<Vector2>());
+            OnHoldingTouch?.Invoke(inputs.Touch.PrimaryTouchPosition.ReadValue<Vector2>());
         }
     }
 

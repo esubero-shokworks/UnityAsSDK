@@ -927,6 +927,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8092440978460995119, guid: c42cfa1b674e88941baee3c246e132fa,
         type: 3}
+      propertyPath: arPlaneManager
+      value: 
+      objectReference: {fileID: 891579909}
+    - target: {fileID: 8092440978460995119, guid: c42cfa1b674e88941baee3c246e132fa,
+        type: 3}
       propertyPath: raycastManager
       value: 
       objectReference: {fileID: 891579910}

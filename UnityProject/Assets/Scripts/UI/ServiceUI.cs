@@ -51,7 +51,7 @@ public class ServiceUI : MonoBehaviour, IUIService
 
         if (imageSwitch)
         {
-            float targetDestination = loadingImage.transform.position.x * 2;
+            float targetDestination = loadingImage.transform.position.x + 55;
             LeanTween.moveX(loadingImage.gameObject, targetDestination, 1f).setEase(LeanTweenType.easeInOutSine).setLoopPingPong();
         }
     }
